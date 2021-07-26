@@ -6,7 +6,7 @@ import LessDisabled from './pages/PitDaily/lessDisabled';
 import ManageStatusComponent from './pages/ManageStatus';
 import MicoSpaComponent from './pages/MIcoSpa';
 import WebPackComponent from './pages/WebPackStudy';
-import ReactComponent from './pages/ReactStudy';
+import ReactComponent from './pages/ReactStudy/life';
 
 const routerConfig = () => {
     return (

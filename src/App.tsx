@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Button } from 'antd';
+import { Layout, Menu} from 'antd';
 import 'antd/dist/antd.less';
 import styles from './App.module.less';
 import {
@@ -12,7 +12,7 @@ import {
 } from '@ant-design/icons';
 import RouteComponent from './router';
 import { Link,withRouter,RouteComponentProps } from 'react-router-dom';
-const { Header, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 class App extends React.Component<RouteComponentProps> {
   state = {
@@ -41,9 +41,14 @@ class App extends React.Component<RouteComponentProps> {
             <Menu.Item key="/WebPackComponent" icon={<BoxPlotOutlined />}>
               <Link to="/WebPackComponent">WebPack</Link>
             </Menu.Item>
-            <Menu.Item key="/ReactComponent" icon={<TrademarkOutlined />}>
-              <Link to="/ReactComponent">React进阶</Link>
-            </Menu.Item>
+            <Menu.SubMenu key="/React" icon={<TrademarkOutlined />} title="React进阶">
+              <Menu.Item>
+                <Link to="/ReactComponent">React生命周期</Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link to="/Hooks">Hooks</Link>
+              </Menu.Item>
+            </Menu.SubMenu>
             <Menu.Item key="/MicoSpaComponent" icon={<MediumOutlined />}>
               <Link to="/MicoSpaComponent">微前端</Link>
             </Menu.Item>
@@ -57,7 +62,6 @@ class App extends React.Component<RouteComponentProps> {
               <Menu.Item key="10">Option 12</Menu.Item>
               <Menu.Item key="11">Option 12</Menu.Item>
               <Menu.Item key="12">Option 12</Menu.Item>
-             
             </Menu.SubMenu>
           </Menu>
         </Sider>
